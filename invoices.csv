@@ -1,0 +1,11 @@
+invoice_id,customer_name,invoice_date,due_date,amount,currency,status,description
+INV-001,Tata Consultancy Services,2024-01-05,2024-01-20,125000,INR,Paid,Software license Q1 2024
+INV-002,Infosys Ltd,2024-01-08,2024-01-23,87500,INR,Paid,Annual maintenance contract
+INV-003,Wipro Technologies,2024-01-10,2024-01-25,210000,INR,Overdue,Cloud infrastructure setup
+INV-004,HCL Technologies,2024-01-12,2024-01-27,45000,INR,Paid,Consulting hours - January
+INV-005,Tech Mahindra,2024-01-15,2024-01-30,95000,INR,Paid,Data migration services
+INV-006,Reliance Industries,2024-01-18,2024-02-02,320000,INR,Sent,ERP module implementation
+INV-007,Bajaj Auto,2024-01-20,2024-02-04,62000,INR,Paid,IT support contract renewal
+INV-008,Mahindra & Mahindra,2024-01-22,2024-02-06,178000,INR,Overdue,Custom software development
+INV-009,Asian Paints,2024-01-25,2024-02-09,33000,INR,Paid,Security audit services
+INV-010,Larsen & Toubro,2024-01-28,2024-02-12,415000,INR,Sent,Digital transformation Phase 1

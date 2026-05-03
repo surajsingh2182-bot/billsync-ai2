@@ -1,0 +1,11 @@
+transaction_id,payment_date,amount,currency,payment_mode,reference,payer_name,remarks
+TXN-8821,2024-01-19,125000,INR,NEFT,INV-001,TCS Mumbai,Payment for software license
+TXN-8822,2024-01-22,87500,INR,RTGS,INV-002,Infosys Bangalore,Q1 maintenance payment
+TXN-8823,2024-01-26,45000,INR,UPI,INV-004,HCL Tech Noida,January consulting
+TXN-8824,2024-01-29,95000,INR,NEFT,INV-005,Tech Mahindra Pune,Data migration inv 005
+TXN-8825,2024-02-01,61500,INR,NEFT,INV-007,Bajaj Auto Ltd,Contract renewal - slight short
+TXN-8826,2024-02-05,33000,INR,UPI,,Asian Paints Mumbai,Security services payment
+TXN-8827,2024-01-30,210000,INR,RTGS,INV-003,Wipro Chennai,Overdue cloud setup payment
+TXN-8828,2024-02-10,125000,INR,NEFT,INV-001,TCS Mumbai,Duplicate? Software license
+TXN-8829,2024-02-08,178000,INR,NEFT,INVOICE008,Mahindra Nasik,Custom dev project
+TXN-8830,2024-01-25,50000,INR,UPI,,Unknown Payer,No reference provided
