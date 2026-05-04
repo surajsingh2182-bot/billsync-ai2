@@ -301,10 +301,11 @@ if can_run:
 
         results = {}
 
+        COOLDOWN = 15  # seconds between agents (free tier rate limit)
+
         # ── Agent 1 ──────────────────────────────────────────────────────────
         with st.status("🔍 Agent 1: Data Analyst — reading and validating your data...", expanded=True) as status:
             st.write("Analysing invoice structure and payment records...")
-            time.sleep(0.5)
             try:
                 agent1_result = run_agent_1(api_key, inv_csv, pay_csv)
                 results["agent1"] = agent1_result
@@ -317,10 +318,12 @@ if can_run:
         with st.expander("📊 Agent 1 Output — Data Summary", expanded=False):
             st.markdown(agent1_result)
 
+        with st.status(f"⏳ Pausing {COOLDOWN}s before next agent (free tier rate limit)...", expanded=False):
+            time.sleep(COOLDOWN)
+
         # ── Agent 2 ──────────────────────────────────────────────────────────
         with st.status("🔗 Agent 2: Matching Agent — pairing invoices to payments...", expanded=True) as status:
             st.write("Running exact match → fuzzy match → semantic match...")
-            time.sleep(0.5)
             try:
                 agent2_result = run_agent_2(api_key, inv_csv, pay_csv, agent1_result)
                 results["agent2"] = agent2_result
@@ -333,10 +336,12 @@ if can_run:
         with st.expander("🔗 Agent 2 Output — Match Results", expanded=False):
             st.markdown(agent2_result)
 
+        with st.status(f"⏳ Pausing {COOLDOWN}s before next agent (free tier rate limit)...", expanded=False):
+            time.sleep(COOLDOWN)
+
         # ── Agent 3 ──────────────────────────────────────────────────────────
         with st.status("⚠️ Agent 3: Auditor — flagging risks and anomalies...", expanded=True) as status:
             st.write("Scanning for duplicates, short payments, unknown transactions...")
-            time.sleep(0.5)
             try:
                 agent3_result = run_agent_3(api_key, agent2_result)
                 results["agent3"] = agent3_result
@@ -349,10 +354,12 @@ if can_run:
         with st.expander("⚠️ Agent 3 Output — Audit & Risk Report", expanded=False):
             st.markdown(agent3_result)
 
+        with st.status(f"⏳ Pausing {COOLDOWN}s before next agent (free tier rate limit)...", expanded=False):
+            time.sleep(COOLDOWN)
+
         # ── Agent 4 ──────────────────────────────────────────────────────────
         with st.status("📝 Agent 4: Report Writer — generating executive summary...", expanded=True) as status:
             st.write("Synthesising all findings into the final report...")
-            time.sleep(0.5)
             try:
                 agent4_result = run_agent_4(api_key, agent1_result, agent2_result, agent3_result)
                 results["agent4"] = agent4_result
